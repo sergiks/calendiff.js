@@ -55,7 +55,7 @@
 		
 		out.days += dateOut.getDate() - dateIn.getDate();
 		if( out.days < 0) {
-			out.days += new Date( dateOut.getFullYear(), dateOut.getMonth() - 1, 0).getDate();
+			out.days += new Date( dateOut.getFullYear(), dateOut.getMonth(), 0).getDate();
 			out.months--;
 		}
 		
