@@ -33,8 +33,38 @@
 			,hours		: 0
 			,minutes	: 0
 			,seconds	: 0
-		};
+		}
+			,sign = 1
+			,diff = 0
+			,proto
+		;
 		
+		// check input
+		proto = Object.prototype.toString.call(dateIn);
+		if( proto !== '[object Date]') {
+			dateIn = new Date( dateIn);
+			if( isNaN( dateIn.getTime())) throw 'Incorrect "In" date format';
+		}
+
+		proto = Object.prototype.toString.call(dateOut);
+		if( proto !== '[object Date]') {
+			dateOut = new Date( dateOut);
+			if( isNaN( dateOut.getTime())) throw 'Incorrect "Out" date format';
+		}
+
+		
+		// check numeric difference
+		diff = dateOut.getTime() - dateIn.getTime();
+		
+		if( diff === 0) {
+			return out;
+		} else if( diff < 0) {
+			sign = -1;
+			dateOut = [dateIn, dateIn = dateOut][0]; // swap the dates
+		}
+
+
+		// calculate human-readable difference
 		out.seconds += dateOut.getSeconds() - dateIn.getSeconds();
 		if( out.seconds < 0) {
 			out.seconds += 60;
@@ -66,6 +96,11 @@
 		}
 		
 		out.years += dateOut.getFullYear() - dateIn.getFullYear();
+		
+		// negative difference case
+		if( sign < 0)
+			for( prop in out)
+				if( out[prop]) out[prop] *= -1; // avoid -0 values
 		
 		return out;
 	}
