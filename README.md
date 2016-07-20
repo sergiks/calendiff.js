@@ -3,9 +3,14 @@ Calendiff.js
 
 Calendar difference between two dates
 
-How a human would calculate the "distance" in her calendar:
-February 14 to April 14 same year is exactly two months, no matter if its a leap year, cause the date is the same.
-This is how calendiff calculates the distance between two given date objects.
+A human way of estimating a calendar distance:
+
+* February 14 to March 14 same year: exactly 2 months, no matter if its a leap year or not;
+* May 5 to May 4: -1 day;
+* April 1 2015 to the same date in 2017: 2 years sharp;
+* January 1 2015 to December 31 2016: 1 year, 11 months and 30 days;
+* 15:45:00 to 15:44:59 same day: -1 second. 
+
 
 Example
 =====
