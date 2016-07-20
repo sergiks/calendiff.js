@@ -1,10 +1,11 @@
-calendiff
+calendiff.js
 ========
 
 Calendar difference between two dates
 
 How a human would calculate the "distance" in her calendar:
 February 14 to April 14 same year is exactly two months, no matter if its a leap year, cause the date is the same.
+This is how calendiff calculates the distance between two given date objects.
 
 Example
 =====
@@ -27,3 +28,8 @@ var diff = calendiff(
 */
 
 ```
+
+License
+=====
+
+Calendiff is open source, MIT License.
