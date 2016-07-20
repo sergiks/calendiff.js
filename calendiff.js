@@ -1,13 +1,13 @@
 (function(context) {
-    if (typeof define === "function"  &&  define.amd) {
-        define(function() {
-            return calendiff;
-        });
-    } else if (typeof module === "object"  &&  module.exports) {
-        module.exports = calendiff;
-    } else {
-        context.calendiff = calendiff;
-    }
+	if (typeof define === "function"  &&  define.amd) {
+		define(function() {
+			return calendiff;
+		});
+	} else if (typeof module === "object"  &&  module.exports) {
+		module.exports = calendiff;
+	} else {
+		context.calendiff = calendiff;
+	}
 
 
 	/**
@@ -68,5 +68,5 @@
 		out.years += dateOut.getFullYear() - dateIn.getFullYear();
 		
 		return out;
-    }
+	}
 })(this);
