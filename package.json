@@ -1,0 +1,33 @@
+{
+  "name": "calendiff",
+  "version": "1.0.0",
+  "description": "Simple function to calculate calendar difference between two dates",
+  "main": "calendiff.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jest-cli": "^13.2.3"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sergiks/calendiff.js.git"
+  },
+  "keywords": [
+    "date",
+    "diff",
+    "calendar",
+    "distance",
+    "human",
+    "readable",
+    "gregorian",
+    "difference"
+  ],
+  "author": "Sergei Sokolov <hello@sergeisokolov.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/sergiks/calendiff.js/issues"
+  },
+  "homepage": "https://github.com/sergiks/calendiff.js"
+}
