@@ -83,9 +83,15 @@
 			out.days--;
 		}
 		
+		// complex part: a month can have various number of days
+		// when entering with a negative number of days, up to -31,
+		// it might take up to two months shift back
+		// should the preceding month only have 28, 29 or 30 days.
 		out.days += dateOut.getDate() - dateIn.getDate();
-		if( out.days < 0) {
-			out.days += new Date( dateOut.getFullYear(), dateOut.getMonth(), 0).getDate();
+		while( out.days < 0) {
+			monthsShift = 0;
+			out.days += new Date( dateOut.getFullYear(), dateOut.getMonth() - monthsShift, 0).getDate();
+			monthsShift++;
 			out.months--;
 		}
 		

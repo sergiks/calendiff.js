@@ -68,5 +68,14 @@ describe('calediff', () => {
     	'2016-09-15T23:45:00'
     )).toEqual({"years":0,"months":-1,"days":0,"hours":0,"minutes":0,"seconds":-1});
   });
+  
+  it('shift two months back from a 31-day-month', () => {
+    const calendiff = require('../calendiff');
+    expect( calendiff(
+    	new Date('2016-07-30T09:00:00'),
+    	new Date('2018-12-01T12:00:00')
+    )).toEqual({"years":2,"months":4,"days":1,"hours":3,"minutes":0,"seconds":0});
+  });
+
 
 });
