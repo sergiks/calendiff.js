@@ -46,4 +46,4 @@ It takes two parameters as the input. Each can be a `Date` object instance or a 
 License
 ====
 
-Calendiff.js is licensed under the MIT License - see the [License](https://github.com/sergiks/calendiff.js/blob/master/LICENSE) file for details
+[MIT](https://github.com/sergiks/calendiff.js/blob/master/LICENSE)
