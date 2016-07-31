@@ -1,3 +1,4 @@
+"use strict";
 (function(context) {
 	if (typeof define === "function"  &&  define.amd) {
 		define(function() {
@@ -37,6 +38,8 @@
 			,sign = 1
 			,diff = 0
 			,proto
+			,monthsShift
+			,prop
 		;
 		
 		// check input
